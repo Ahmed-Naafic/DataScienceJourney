@@ -17,7 +17,7 @@ def train_and_save_model(data_path, model_output, preprocessor_output):
     y = df['Price']
     
     # Identify categorical and numerical columns
-    categorical_cols = X.select_dtypes(include=['object']).columns.tolist()
+    categorical_cols = X.select_dtypes(include=['object', 'str']).columns.tolist()
     numerical_cols = X.select_dtypes(include=['int64', 'float64']).columns.tolist()
     
     # Create preprocessing pipeline
